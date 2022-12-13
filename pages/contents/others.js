@@ -1,40 +1,23 @@
-import styles from "../../styles/contents/others.module.css";
-import Contents from "./contents";
-import Link from "next/link";
-import Lego_pic from "./img/lego_pic.png";
+import styles from "../../styles/contents/software.module.css";
 import Image from "next/image";
-import Footer from "../footer/footer";
-
-export default function others() {
+import Fade from 'react-reveal/Fade'
+import maker from "./img/maker.png"
+export default function Others() {
     return (
-        <div className={styles.others}>
-            <Contents />
-            <div className={styles.main}>
-                <div style={{height:51}} />
-                <div className={styles.menu}>
-                    <Link href="/contents/all"><text>전체</text></Link>
-                    <Link href="/contents/lego"><text style={{marginLeft:83}}>레고교육</text></Link>
-                    <Link href="/contents/software"><text style={{marginLeft:83}}>소프트웨어교육</text></Link>
-                    <div className={styles.check} style={{marginLeft:83}}>
-                        <Link href="/contents/others"><text>기타교육들</text></Link>
-                    </div>
+        <div>
+            <Fade bottom>
+                <div className={styles.title}>
+                    <p>메이커 교육</p>
                 </div>
-                <div className={styles.title} style={{marginTop:115}}>
-                    <text>메이커 교육</text>
+                <div className={styles.lego_img}><Image src={maker} /></div>
+                <div className={`${styles.title} ${styles.top2}`}>
+                    <p>메이커 교육이란?</p>
                 </div>
-                <div className={styles.lego_img}><Image src={Lego_pic}/></div>
-                <div className={styles.title} style={{marginTop:115}}>
-                    <text>??? 교육</text>
+                <div className={styles.explain}>
+                    <p>디자인사고를 통해 직접 아이디어를 생각하고 구체화하며 다양한 방법의 개선과정을 적용하여 생활에 필요한</p>
+                    <p>물건들을 창의적으로 만들어보는 메이커교육은 여러분의 다양한 능력을 발현시켜 줄 것 입니다.</p>
                 </div>
-                <div className={styles.lego_img}><Image src={Lego_pic}/></div>
-                <div className={styles.title} style={{marginTop:115}}>
-                    <text>??? 교육</text>
-                </div>
-                <div className={styles.lego_img}><Image src={Lego_pic}/></div>
-                <div style={{textAlign:"center"}}>
-                    <Footer/>
-                </div>
-            </div>
+            </Fade>
         </div>
     )
 }

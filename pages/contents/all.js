@@ -3,55 +3,37 @@ import Image from "next/image";
 import Lego_pic from "./img/lego_pic.png";
 import Maker_pic from "./img/maker.png";
 import Software_pic from "./img/software.png";
-import Contents from "./contents";
-import Link from "next/link";
-import Footer from "../footer/footer";
-
-export default function all() {
+import Fade from 'react-reveal/Fade'
+export default function All() {
     return (
-        <div className={styles.all}>
-            <Contents />
-            <div className={styles.main}>
-                <div style={{height:51}} />
-                <div className={styles.menu}>
-                    <div className={styles.check}>
-                        <text>전체</text>
-                    </div>
-                    <Link href="/contents/lego"><text style={{marginLeft:83}}>레고교육</text></Link>
-                    <Link href="/contents/software"><text style={{marginLeft:83}}>소프트웨어교육</text></Link>
-                    <Link href="/contents/others"><text style={{marginLeft:83}}>기타교육들</text></Link>
+        <div className={styles.root}>
+            <div className={styles.class}>
+                <Fade bottom>
+                <h2>레고 공학 교육</h2>
+                <div className={styles.explain}>
+                    <Image src={Lego_pic}/>
+                    <p>자신만의 로봇을 만들어 보는 과정을 통해 공학적 사고와 문제해결력을 키울 수 있습니다.</p>
                 </div>
-                <div>
-                    <h2 className={styles.what}>레고교육</h2>
-                    <div className={styles.about}>
-                        <Image src={Lego_pic} className={styles.image}/>
-                        <br/>
-                        <text>레고수업에 대한 내용(추후 수정)</text>
-                    </div>
+                </Fade>
+            </div>
+            <div className={styles.class}>
+                <Fade bottom>
+                <h2>소프트웨어 교육</h2>
+                <div className={styles.explain}>
+                    <Image src={Software_pic}/>
+                    <p>사물인터넷, 앱 개발, 인공지능에 이르기까지 다양한 소프트웨어교육을 통해 편리한 세상을 만들어 봅시다.</p>
                 </div>
-                <br/>
-                <div>
-                    <h2 className={styles.what}>소프트웨어교육</h2>
-                    <div className={styles.about}>
-                        <Image src={Software_pic} className={styles.image}/>
-                        <br />
-                        <text>소프트웨어 교육에 대한 내용(추후 수정)</text>
-                    </div>
+                </Fade>
+            </div>
+            <div className={styles.class}>
+                <Fade bottom>
+                <h2>메이커 교육</h2>
+                <div className={styles.explain}>
+                    <Image src={Maker_pic}/>
+                    <p>생활에 필요한 물건들을 창의적으로 만들어보는 메이커교육은 여러분의 다양한 능력을 발현시켜 줄 것입니다.</p>
                 </div>
-                <br/>
-                <div>
-                    <h2 className={styles.what}>메이커교육</h2>
-                    <div className={styles.about}>
-                        <Image src={Maker_pic} className={styles.image}/>
-                        <br />
-                        <text>메이커 교육에 대한 내용(추후 수정)</text>
-                    </div>
-                </div>
-                <div style={{textAlign:"center"}}>
-                    <Footer/>
-                </div>
+                </Fade>
             </div>
         </div>
-
     )
 }
