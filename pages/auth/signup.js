@@ -5,12 +5,15 @@ import Image from "next/image";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { kakaoUserInfo } from "../../util/user";
 import styled from "styled-components";
-import { Init } from "../../util/init";
 
 export default function Login2() {
-  const [user, setUser] = useState(Init);
-  const [kakaoUser, setKakaoUser] = useRecoilState(kakaoUserInfo)
-  
+  const [user, setUser] = useState({
+    name: "",
+    type: 0,
+    category: "",
+  });
+  const [kakaoUser, setKakaoUser] = useRecoilState(kakaoUserInfo);
+
   const change = (e) => {
     const { name, value } = e.target;
     const newInput = {
@@ -20,7 +23,7 @@ export default function Login2() {
     setUser(newInput);
   };
 
-  const postUserJoin = () => {
+  const postUserJoin = async () => {
     console.log(user);
     const data = new FormData();
 
@@ -28,27 +31,54 @@ export default function Login2() {
     data.append("type", user.type);
     data.append("kakaoid", kakaoUser.kakaoid);
     data.append("k_img_url", kakaoUser.k_img_url);
-    if(user.category) data.append("category", user.category);
+    if (user.category) data.append("category", user.category);
 
-    instance
-      .post("/user/join", data, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      })
-      .then((res) => {
-        if (res.data === "success") {
-          setKakaoUser(({
-            ...user,
-            ...kakaoUser,
-            isLogin: true,
-          }));
-          window.location.href = "/";
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      const res = (
+        await instance.post("/user/join", data, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+      ).data;
+      console.log(res);
+
+      let res2;
+      if (user.type === "1") {
+        const data2 = new FormData();
+
+        data2.append("lecturer_id", res.id);
+        data2.append("category", res.category);
+
+        res2 = (
+          await instance.post("/create/lecture", data2, {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          })
+        ).data;
+
+        console.log(res2);
+      }
+
+      if(res2){
+        setKakaoUser({
+          ...res,
+          l_id: res2.id,
+          isLogin: true,
+        });
+      }
+      else{
+        setKakaoUser({
+          ...res,
+          l_id: "",
+          isLogin: true,
+        });
+      }
+      window.location.href = "/";
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -95,19 +125,43 @@ export default function Login2() {
             <CategoryContainer>
               <p className={styles.p2}>강의 유형을 선택해 주세요</p>
               <div className={styles.lectures}>
-                <input type="radio" name="category" value="1" id="lego" />
+                <input
+                  type="radio"
+                  name="category"
+                  value="1"
+                  onChange={change}
+                  id="lego"
+                />
                 <label className={styles.lab1} htmlFor="lego">
                   레고
                 </label>
-                <input type="radio" name="category" value="2" id="software" />
+                <input
+                  type="radio"
+                  name="category"
+                  value="2"
+                  onChange={change}
+                  id="software"
+                />
                 <label className={styles.lab2} htmlFor="software">
                   소프트웨어
                 </label>
-                <input type="radio" name="category" value="3" id="maker" />
+                <input
+                  type="radio"
+                  name="category"
+                  value="3"
+                  onChange={change}
+                  id="maker"
+                />
                 <label className={styles.lab2} htmlFor="maker">
                   메이커
                 </label>
-                <input type="radio" name="category" value="4" id="etc" />
+                <input
+                  type="radio"
+                  name="category"
+                  value="4"
+                  onChange={change}
+                  id="etc"
+                />
                 <label className={styles.lab2} htmlFor="etc">
                   기타
                 </label>
@@ -126,6 +180,6 @@ export default function Login2() {
 }
 
 const CategoryContainer = styled.div`
-    width: 100%;
-    text-align: center;
-`
+  width: 100%;
+  text-align: center;
+`;
