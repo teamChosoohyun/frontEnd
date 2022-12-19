@@ -1,59 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bb84e89-5868-40ba-827d-a8e1181748c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/material/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/educate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/3Dmodeling.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/3Dprinter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/EV3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/aduino.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/app_inventer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/entry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/micro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/noimage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/python.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/raspberry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/scratch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/img/spike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/material/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/material/all.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/material/material.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/material/materialIndex.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Intro/introduction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/allFiles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contents/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contents/contents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contents/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contents/lego.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/lego.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contents/others.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/others.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header/colored_header.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header/colored_header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header/mainHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header/mainHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/lecturer/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lecturer/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/lecturer/lecturerList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/loginpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/loginpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main/lecturer.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main/lecturer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Intro/introduction.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Intro/introduction.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/contents/all.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/all.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/contents/contents.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/contents.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/contents/lego.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/lego.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/contents/others.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/others.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/contents/software.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/software.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/header/colored_header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header/colored_header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header/header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/header/mainHeader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header/mainHeader.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/lecturer/detail.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/lecturer/detail.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/login/login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/login/login.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main/lecturer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main/lecturer.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="9bb84e89-5868-40ba-827d-a8e1181748c9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +94,7 @@
       <workItem from="1671085918207" duration="10640000" />
       <workItem from="1671186854285" duration="1511000" />
       <workItem from="1671358572824" duration="441000" />
-      <workItem from="1671459211503" duration="810000" />
+      <workItem from="1671459211503" duration="1162000" />
     </task>
     <servers />
   </component>
