@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb84e89-5868-40ba-827d-a8e1181748c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/util/axiosSetting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contents/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header/colored_header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/colored_header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/header/mainHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/mainHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/intro/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intro/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/lecturer/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lecturer/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/lecturer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lecturer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/login2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/loginpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/loginpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/img/lego_pic.png" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/img/lego_pic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/img/maker.png" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/img/maker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/img/software.png" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/img/software.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/lego.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/lego.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/others.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/others.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/software.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/software.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +43,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.14.2",
-    "javascript.nodejs.core.library.typings.version": "16.18.8",
-    "last_opened_file_path": "C:/Users/SW2127/Desktop/all/make_me/dblog/D-blog_Frontend",
+    "javascript.nodejs.core.library.configured.version": "16.17.0",
+    "javascript.nodejs.core.library.typings.version": "16.18.10",
+    "last_opened_file_path": "/Users/parkdaeun/Desktop/important/frontEnd/pages/contents",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -68,6 +58,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/contents" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/images" />
     </key>
@@ -114,6 +105,7 @@
       <workItem from="1670844996621" duration="44000" />
       <workItem from="1670894316005" duration="7281000" />
       <workItem from="1670914751243" duration="4728000" />
+      <workItem from="1671459620411" duration="1042000" />
     </task>
     <servers />
   </component>
