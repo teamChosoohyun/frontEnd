@@ -9,7 +9,7 @@ export default function Others() {
                 <div className={styles.title}>
                     <p>메이커 교육</p>
                 </div>
-                <div className={styles.lego_img}><Image src={maker} /></div>
+                <div className={styles.lego_img}><Image width={630} height={350} src={maker} /></div>
                 <div className={`${styles.title} ${styles.top2}`}>
                     <p>메이커 교육이란?</p>
                 </div>

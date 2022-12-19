@@ -19,6 +19,7 @@
 
 .img{
     margin-top: 100px;
+    z-index: 0;
 }
 
 .flex{

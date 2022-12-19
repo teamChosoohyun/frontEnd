@@ -2,15 +2,15 @@
     display: flex;
     align-items: center;
     background: none;
-    height: 60px;
+    height: 50px;
     color: black;
     z-index: 2;
     width: 100%;
     font-weight: bold;
     position : fixed;
     top:0px;
+    background-color: white;
 }
-
 .nav{
     display: flex;
     align-items: center;
@@ -21,6 +21,7 @@
 .nav > span{
     margin-right: 60px;
     cursor: pointer;
+    
 }
 
 .auth{

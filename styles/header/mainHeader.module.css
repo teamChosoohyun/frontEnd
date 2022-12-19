@@ -4,17 +4,24 @@
     background: none;
     height: 60px;
     color: white;
-    z-index: 2;
-    top: 10px;
+    z-index: 3;
     width: 100%;
     font-weight: bold;
+    font-size: 18px;
     position: fixed;
     animation: growUp 1s;
+    transition: all ease 1s;
 }
 
 .invisible{
     animation: growDown 1s;
     animation-fill-mode: forwards;
+}
+
+.whiteBack{
+    background-color: white;
+    color: black;
+    transition: all ease 1s;
 }
 
 @keyframes growDown {

@@ -15,9 +15,9 @@ export default function Index(){
             <Header />
             <div className={styles.white}>
                 <Fade bottom>
-                <h2 className={styles.intro}>콘텐츠 소개</h2>
-                <p className={styles.content}>"더 나은 미래를, 보다 많은 학생에게"</p>
-                <p className={styles.content2}>모든 아이들이 누릴 수 있는 소프트웨어 교육</p>
+                    <h2 className={styles.intro}>콘텐츠 소개</h2>
+                    <p className={styles.content}>"더 나은 미래를, 보다 많은 학생에게"</p>
+                    <p className={styles.content2}>모든 아이들이 누릴 수 있는 소프트웨어 교육</p>
                 </Fade>
                 <div className={styles.menu}>
                     <span className={styles.left} onClick={() => setEducation(1)} >전체</span>

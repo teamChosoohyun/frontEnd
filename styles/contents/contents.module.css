@@ -18,6 +18,25 @@
 }
 
 .float {
-    float : right;
+    float: right;
     display: inline-block;
+}
+
+.intro{
+    font-size : 60px;
+    padding-top : 90px;
+    margin-bottom: 30px;
+}
+
+.content{
+    font-size : 30px;
+    color: #3F80FF;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.content2{
+    font-size : 30px;
+    font-weight : bold;
 }

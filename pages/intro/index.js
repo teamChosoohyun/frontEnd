@@ -1,15 +1,18 @@
 import styles from '../../styles/Intro/introduction.module.css';
-import { Header, Footer } from '../allFiles'
-export default function Introduction(){
+import Header from '../header/header'
+import Footer from '../footer/footer'
+import Fade from 'react-reveal/Fade'
+export default function Index(){
     return(
         <div className={styles.content}>
-            <Header className={styles.ducheader}/>
+            <Header/>
             <div className={styles.container}>
                 <h1 className={styles.title}>코딩맘스쿨협동조합</h1>
                 <h3 className={styles.info}>
                     우리아이 미래 맞춤 교육<br />
                     코딩맘들과 함께
                 </h3>
+                <Fade bottom>
                 <img src={"/images/image33.png"} alt={"icon"} className={styles.mainImg} />
                 <h1 className={styles.titled}>코딩맘</h1>
                 <div className={styles.justline}></div>
@@ -63,6 +66,7 @@ export default function Introduction(){
                     <img src={"/images/Instagram.png"} alt={'icoㅌn'} className={styles.insta}/>
                     <h1 className={styles.h1insta}>인스타그램 바로가기</h1>
                 </div>
+                </Fade>
             </div>
             <Footer />
         </div>

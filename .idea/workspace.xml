@@ -2,7 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb84e89-5868-40ba-827d-a8e1181748c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/material/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/educate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/3Dmodeling.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/3Dprinter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/EV3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/aduino.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/app_inventer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/entry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/micro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/noimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/python.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/raspberry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/scratch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/img/spike.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/material/all.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/material/material.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/material/materialIndex.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Intro/introduction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/allFiles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/contents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/lego.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/lego.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contents/others.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contents/others.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/header/colored_header.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header/colored_header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/header/mainHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/header/mainHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lecturer/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lecturer/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lecturer/lecturerList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/loginpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/loginpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main/lecturer.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main/lecturer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Intro/introduction.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Intro/introduction.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/contents/all.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/all.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/contents/contents.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/contents.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/contents/lego.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/lego.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/contents/others.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/others.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/contents/software.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contents/software.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/header/colored_header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header/colored_header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/header/mainHeader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header/mainHeader.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/lecturer/detail.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/lecturer/detail.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/login/login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/login/login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main/lecturer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main/lecturer.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +62,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -24,36 +74,40 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GHwmRoYOn6mwBHXw5fdZhsugF7" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/parkdaeun/Desktop/codingmomschool/codingmom/pages/contents",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parkdaeun/Desktop/codingmomschool 2/codingmom&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/material/img" />
+      <recent name="$PROJECT_DIR$/pages/contents/img" />
       <recent name="$PROJECT_DIR$/pages/contents" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/material" />
+      <recent name="$PROJECT_DIR$/pages/main" />
       <recent name="$PROJECT_DIR$/pages/contents/img" />
       <recent name="C:\Users\SW2127\Desktop\all\make_me\teamChosoohyun\front\styles\header" />
     </key>
@@ -88,7 +142,11 @@
       <workItem from="1667263488502" duration="7509000" />
       <workItem from="1667343875216" duration="734000" />
       <workItem from="1667370311121" duration="24000" />
-      <workItem from="1670892170100" duration="673000" />
+      <workItem from="1670892170100" duration="6758000" />
+      <workItem from="1671085918207" duration="10640000" />
+      <workItem from="1671186854285" duration="1511000" />
+      <workItem from="1671358572824" duration="441000" />
+      <workItem from="1671459211503" duration="810000" />
     </task>
     <servers />
   </component>

@@ -11,6 +11,25 @@
     cursor: pointer;
 }
 
+.afterMain{
+    height: 51px;
+}
+
+.left{
+    margin-left: 83px;
+}
+
+.top1{
+    margin-top: 115px;
+}
+
+.top2{
+    margin-top: 69px;
+}
+
+.center{
+    text-align: center;
+}
 
 .check {
     width : 140px;

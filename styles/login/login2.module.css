@@ -1,0 +1,141 @@
+
+
+.loginmain{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #4065C5;
+    animation: fadein 2s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.logins{
+    position: absolute;
+    background-color: white;
+    width: 95%;
+    height: 90%;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+}
+.filebox {
+    position: fixed;
+    width: 10px;
+    margin-left: 7%;
+    margin-top: 13%;
+}
+.filebox > img {
+    width: 300px;
+    height: 100%;
+}
+.line {
+    position: fixed;
+    margin-left: 38%;
+    margin-top: 1%;
+    width: 2px;
+    height: 85%;
+    background-color: gray;
+}
+.name {
+    position: fixed;
+    margin-left: 50%;
+    top: 160px;
+    border: 0;
+    width: 36%;
+    height: 35px;
+    border-radius: 2px;
+    background-color: #D9D9D9;
+}
+.name::placeholder {
+    color: #8E8E8E;
+    padding-left: 15px;
+}
+.p1 {
+    position: fixed;
+    color: #8E8E8E;
+    margin-left: 63%;
+    top: 230px;
+    font-size: 14px;
+}
+.p2 {
+    position: fixed;
+    color: #8E8E8E;
+    margin-left: 60%;
+    top: 340px;
+    font-size: 14px;
+}
+.users {
+    position: fixed;
+    margin-left: 50%;
+    top: 260px;
+    border: 0;
+    width: 36%;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #D9D9D9;
+}
+.labels1 {
+    margin-left: 40%;
+    line-height: 50px;
+}
+.labels2 {
+    margin-left: 2.5%;
+    line-height: 50px;
+}
+
+.lectures {
+    position: fixed;
+    margin-left: 50%;
+    top: 370px;
+    border: 0;
+    width: 36%;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #D9D9D9;
+}
+.lab1 {
+    margin-left: 20%;
+    line-height: 50px;
+}
+.lab2 {
+    margin-left: 6%;
+    line-height: 50px;
+}
+.lab3 {
+    margin-left: 6%;
+    line-height: 50px;
+}
+.lab4 {
+    margin-left: 6%;
+    line-height: 50px;
+}
+.buttonbox {
+    position: fixed;
+    margin-left: 50%;
+    top: 500px;
+    border: 0;
+    width: 36%;
+    height: 50px;
+    border-radius: 2px;
+    background-color: white;
+    text-align: center;
+}
+.gosign {
+    border: 0;
+    width: 150px;
+    height: 50px;
+    border-radius: 2px;
+    line-height: 50px;
+    background-color: #D9D9D9;
+    text-align: center;
+    font-size: 17px;
+    
+}
+.gosign > text {
+    cursor: pointer;
+}
