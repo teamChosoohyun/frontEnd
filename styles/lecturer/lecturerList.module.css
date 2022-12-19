@@ -1,42 +1,49 @@
-.lecturer{
-    width: 100%;
-    height: 100%;
-    background-color: #4065C5;
+.lecturer {
+  width: 100%;
+  height: 100%;
+  background-color: #4065c5;
 }
 
-.lecturerList{
-    background-color: white;
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
+.lecturerList {
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.category{
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
+.category {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
 }
 
-.categoryButton{
-    font-size: 17px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 30px 10px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-right: 15px;
-    margin-left: 15px;
+.categoryButton {
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
-.categoryButton:hover{
-    background-color: #FFA41D;
+.categoryButton:hover {
+  background-color: #ffa41d;
 }
 
-.flex{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  column-gap: 10em;
+  row-gap: 2em;
 }
