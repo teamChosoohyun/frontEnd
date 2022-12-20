@@ -13,7 +13,7 @@ export default function Loginpage() {
           />
         </Link>
         <img
-          src={"/images/logback.png"}
+          src={"/images/logback.jpg"}
           alt={"icons"}
           className={styles.logback}
         />
