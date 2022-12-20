@@ -61,14 +61,14 @@
 }
 .divyear1 {
     margin-right: 53%;
-    margin-top: -57.5%;
+    margin-top: -60%;
 }
 .year1, .year3, .year5 {
     font-size: 30px;
     direction: rtl;
 }
 .year1p, .year3p, .year5p {
-    font-size: 15px;
+    font-size: 18px;
     direction: rtl;
 }
 .divyear2 {
@@ -78,7 +78,7 @@
     font-size: 30px;
 }
 .year2p, .year4p {
-    font-size: 15px;
+    font-size: 18px;
 }
 .divyear3{
     margin-right: 53%;
@@ -88,12 +88,12 @@
     margin-top:1.5%;
 }
 .divyear5{
+    margin-top: 5rem;
     margin-right: 53%;
 }
 .sns {
     text-align: center;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 4rem auto auto;
 }
 .justline2 {
     width: 250px;
