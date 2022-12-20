@@ -135,25 +135,28 @@ export default function Detail() {
     const now = getDate();
     const getNow = getNowTime();
 
-    console.log(now);
-    if (num === 1) data.append("go_work", now.toString());
-    else data.append("leave_work", now.toString());
-    data.append("id", user.l_id);
+    if(num === 1) workTimeFunc(1, getNow);
+    else workTimeFunc(num, getNow);
 
-    const url = num === 1 ? "/update/gowork" : "/update/leavework";
+    // console.log(now);
+    // if (num === 1) data.append("go_work", now.toString());
+    // else data.append("leave_work", now.toString());
+    // data.append("id", user.l_id);
 
-    instance
-      .put(url, data, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      })
-      .then((res) => {
-        workTimeFunc(num, getNow);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // const url = num === 1 ? "/update/gowork" : "/update/leavework";
+
+    // instance
+    //   .put(url, data, {
+    //     headers: {
+    //       "Content-Type": "multipart/form-data",
+    //     },
+    //   })
+    //   .then((res) => {
+    //     workTimeFunc(num, getNow);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
   };
 
   return (
