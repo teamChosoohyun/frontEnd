@@ -2,8 +2,12 @@ import styles from '../../styles/main/intro.module.css';
 import Image from "next/image";
 import { AiOutlineRight } from 'react-icons/ai';
 import IntroImage from '../../public/images/codingmom.png'
+import { useRouter } from 'next/router';
 
 export default function Intro(){
+
+  const router = useRouter();
+
     return (
       <div className={styles.intro}>
         <div className={styles.introText}>
@@ -16,9 +20,11 @@ export default function Intro(){
           </span>
           <div className={styles.remarks}>
             <p className={styles.remarksText}>
-              뭔가 코딩맘을 아우러서 소개하는 내용이 들어갔으면 좋을 것 같은 영역
+              코딩하는 엄마들이 모여 만든 코딩맘스쿨 협동조합.
+              <br/>
+              당신의 자녀들을 우리의 자녀처럼 가르치겠습니다.
             </p>
-            <p className={styles.info}>
+            <p className={styles.info} onClick={()=> router.push("/intro")}>
               자세히 보기 <AiOutlineRight />
             </p>
           </div>

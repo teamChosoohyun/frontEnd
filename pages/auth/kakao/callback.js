@@ -32,6 +32,7 @@ export default function Callback() {
     instance
       .get(`/user/getKakaoUserInfo?code=${code}`)
       .then((res) => {
+        console.log(res);
         const img = res.data.k_img_url;
         setUser({
           ...user,

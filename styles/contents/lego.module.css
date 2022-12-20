@@ -68,7 +68,9 @@
 .explain {
     text-align : center;
     font-size: 25px;
-    margin-top: 65px;
+    font-weight: bold;
+    width: 51%;
+    margin: 65px auto;
 }
 
 .main {

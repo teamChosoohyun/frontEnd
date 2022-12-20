@@ -25,7 +25,7 @@ export default function Main() {
       <Fade bottom>
         <Content />
         <Intro />
-        <Lecturer />
+        {/* <Lecturer /> */}
         <Footer />
       </Fade>
     </div>

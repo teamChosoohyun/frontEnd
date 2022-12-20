@@ -23,7 +23,7 @@ export default function All() {
           <div className={styles.explain}>
             <Image src={Software_pic} />
             <p>
-              사물인터넷, 앱 개발, 인공지능에 이르기까지 다양한 소프트웨어교육을
+              사물인터넷, 앱 개발, 인공지능에 이르기까지 다양한 소프트웨어 교육을
               통해 편리한 세상을 만들어 봅시다.
             </p>
           </div>

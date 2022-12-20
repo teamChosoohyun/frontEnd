@@ -1,8 +1,11 @@
 import styles from '../../styles/main/lecturer.module.css';
 import Image from "next/image";
 import {AiOutlineRight} from 'react-icons/ai';
+import {useRouter} from 'next/router';
 
 export default function Lecturer() {
+
+    const router = useRouter();
     return (
         <div className={styles.lecturer}>
             <div className={`${styles.lec} ${styles.one}`}>
@@ -35,7 +38,7 @@ export default function Lecturer() {
                 </span>
                 <p className={styles.lecField}>소프트웨어</p>
             </div>
-            <p className={styles.info}>
+            <p className={styles.info} onClick={()=> router.push("/lecturer")} >
                 자세히 보기
                 <AiOutlineRight className="arrow"/>
             </p>
