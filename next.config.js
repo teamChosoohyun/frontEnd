@@ -4,15 +4,15 @@ const nextConfig = {
     return [
       {
         source: "/user",
-        destination: "http://localhost:8080/user",
+        destination: "http://3.34.239.208:2020/user",
       },
       {
         source: "/lecturer",
-        destination: "http://localhost:8080/lecturer",
+        destination: "http://3.34.239.208:2020/lecturer",
       },
       {
         source: "/update",
-        destination: "http://localhost:8080/update",
+        destination: "http://3.34.239.208:2020/update",
       },
     ];
   },
