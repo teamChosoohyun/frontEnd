@@ -18,7 +18,7 @@ export default function Loginpage() {
           className={styles.logback}
         />
       </div>
-      <Link href="https://kauth.kakao.com/oauth/authorize?client_id=95e372793e81af183d89b707dfa1d7bd&redirect_uri=http://localhost:3000/auth/kakao/callback&response_type=code">
+      <Link href="https://kauth.kakao.com/oauth/authorize?client_id=95e372793e81af183d89b707dfa1d7bd&redirect_uri=https://front-end-two-gold.vercel.app//auth/kakao/callback&response_type=code">
         <button className={styles.kakao}>
           <img
             src={"/images/kakao.png"}
