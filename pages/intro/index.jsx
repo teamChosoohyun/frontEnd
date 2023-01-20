@@ -1,7 +1,7 @@
 import styles from '../../styles/Intro/introduction.module.css';
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
-import Fade from 'react-reveal/Fade'
+
 export default function Index(){
     return (
       <div className={styles.content}>
@@ -13,7 +13,6 @@ export default function Index(){
             <br />
             코딩맘들과 함께
           </h3>
-          <Fade bottom>
             <img
               src={"/images/image33.png"}
               alt={"icon"}
@@ -115,7 +114,6 @@ export default function Index(){
               />
               <h1 className={styles.h1insta}>인스타그램 바로가기</h1>
             </div>
-          </Fade>
           <Footer />
         </div>
       </div>

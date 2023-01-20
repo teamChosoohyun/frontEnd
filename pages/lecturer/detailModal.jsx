@@ -5,7 +5,6 @@ export default function DetailModal(){
     
     return(
        <ModalContainer>
-            
             <Title>{date.substring(0, date.length-1)}</Title>
             <Box>
                 <span>소프트웨어 수업</span>

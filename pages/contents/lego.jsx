@@ -1,11 +1,10 @@
 import styles from "../../styles/contents/lego.module.css";
-import Lego_pic from "./img/lego_pic.png";
+import Lego_pic from "../../public/images/lego_pic.png";
 import Image from "next/image";
-import Fade from "react-reveal/Fade";
+
 export default function Lego() {
   return (
     <div>
-      <Fade bottom>
         <div className={styles.title}>
           <p>레고 공학 교육</p>
         </div>
@@ -25,7 +24,6 @@ export default function Lego() {
             과정을 통해 공학적 사고와 문제해결력을 키울 수 있습니다.
           </p>
         </div>
-      </Fade>
     </div>
   );
 }

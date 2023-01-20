@@ -4,13 +4,6 @@
   background-color: #4065c5;
 }
 
-.lecturerList {
-  background-color: white;
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-}
-
 .category {
   padding-top: 100px;
   display: flex;

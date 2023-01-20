@@ -2,49 +2,32 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import LecturerInfo from "./lecturerInfo";
 import styles from "../../styles/lecturer/lecturerList.module.css";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { instance } from "../../util/axiosSetting";
 import { SetCategory } from "../../util/category";
 import styled from "styled-components";
 
-export default function Index() {
+export default function Lecturer() {
   const [list, setList] = useState([]);
   const [category, setCategory] = useState(0);
 
   useEffect(() => {
-    instance
-      .get("/lecturer/list")
-      .then((res) => {
-        console.log(res.data);
-        setList(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
-  useEffect(() => {
-    if (category !== 0) {
-      instance
-        .get(`/lecturer/list/${category}`)
-        .then((res) => {
-          setList(res.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    } else {
-      instance
-        .get("/lecturer/list")
-        .then((res) => {
-          console.log(res.data);
-          setList(res.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
+    (async () => {
+      try {
+        if (category !== 0) {
+          const res = (await instance.get(`/user/lecturer/info/${category}`)).data;
+          console.log(res)
+          if (res) setList(res);
+        }
+        else {
+          const res = (await instance.get(`/user/lecturer`)).data;
+          console.log(res)
+          if (res) setList(res);
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    })();
   }, [category]);
 
   return (
@@ -70,7 +53,7 @@ export default function Index() {
         </div>
         <div className={styles.flex}>
           <div className={styles.grid}>
-            {list.map((value) => {
+            {list?.map((value, index) => {
               const category = SetCategory(value.category);
               return (
                 <LecturerInfo
@@ -78,6 +61,7 @@ export default function Index() {
                   name={value.name}
                   category={category}
                   id={value.id}
+                  key={index}
                 />
               );
             })}
@@ -92,7 +76,7 @@ export default function Index() {
 const LecturerContainer = styled.div`
   background-color: white;
   width: 80%;
-  height: ${(prosp)=> prosp.len > 4 ? "100%" : "100vh"};
+  height: ${({ len }) => len >= 4 ? "100%" : "100vh"};
   margin: 0 auto;
 `
 
@@ -108,7 +92,7 @@ const Button = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: ${(props)=> (props.num === props.idx ? "#ffa41d" : "white")};
+  background-color: ${({ num, idx }) => (num === idx ? "#ffa41d" : "white")};
   &:hover{
     background-color: #ffa41d;
   }

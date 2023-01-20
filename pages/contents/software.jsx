@@ -1,11 +1,10 @@
 import styles from "../../styles/contents/software.module.css";
-import Soft_pic from "./img/software.png";
+import Soft_pic from "../../public/images/software.png";
 import Image from "next/image";
-import Fade from "react-reveal/Fade";
+
 export default function Software() {
   return (
     <div>
-      <Fade bottom>
         <div className={styles.title}>
           <p>소프트웨어 교육</p>
         </div>
@@ -25,7 +24,6 @@ export default function Software() {
             통해 편리한 세상을 만들어 봅시다.
           </p>
         </div>
-      </Fade>
     </div>
   );
 }

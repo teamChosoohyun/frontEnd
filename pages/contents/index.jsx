@@ -7,6 +7,7 @@ import Others from "./others";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import styled from "styled-components";
+
 export default function Index() {
     const [education, setEducation] = useState(1);
     return (
