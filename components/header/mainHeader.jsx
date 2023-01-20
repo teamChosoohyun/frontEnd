@@ -4,20 +4,21 @@ import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useRecoilValue } from "recoil";
-import { kakaoUserInfo } from "../../util/user";
+import { kakaoUserInfo } from "../../store/user";
 import { Init } from "../../util/init";
+import { updateUser } from "../../util/updateUser";
 
 export default function MainHeader() {
   const user = useRecoilValue(kakaoUserInfo);
   const [userinfo, setUserInfo] = useState(Init);
-  const [header, setHeader] = useState(true);
   const headerRef = useRef();
   let lastPos = 0;
 
   useEffect(() => {
-    console.log(user);
     setUserInfo(user);
-  }, []);
+  }, [user]);
+
+  updateUser();
 
   useScrollPosition(
     ({ currPos }) => {
@@ -35,7 +36,7 @@ export default function MainHeader() {
       }
       lastPos = scrollY;
     },
-    [header]
+    [true]
   );
 
   return (

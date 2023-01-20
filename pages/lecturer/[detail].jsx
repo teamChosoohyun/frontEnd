@@ -7,10 +7,9 @@ import Footer from "../../components/footer/footer";
 import DetailModal from "./detailModal";
 import styles from "../../styles/lecturer/detail.module.css";
 import styled from "styled-components";
-import classNames from "classnames";
 import Modal from "react-modal";
 import { useRecoilValue } from "recoil";
-import { kakaoUserInfo } from "../../util/user";
+import { kakaoUserInfo } from "../../store/user";
 import { instance } from "../../util/axiosSetting";
 import { useRouter } from "next/router";
 import { Init } from "../../util/init";
@@ -27,39 +26,21 @@ export default function Detail() {
     leaTime: "",
   });
   const [modal, setModal] = useState(false);
-  // const [modify, setModify] = useState(false);
-  const [userinfo, setUserinfo] = useState(Init);
-  const [user, setUser] = useState(Init);
-  const [calendar, setCalendar] = useState();
+  const [userinfo, setUserinfo] = useState(Init); // 강사 정보
+  const [user, setUser] = useState(Init); // 내 정보
   const kakaoUser = useRecoilValue(kakaoUserInfo);
-  const kakaoid = kakaoUser.kakaoid;
 
   useEffect(() => {
     setUser(kakaoUser);
     (async () => {
       try {
-        const res = (await instance.get(`/lecturer/${detail}`)).data;
-        const category = SetCategory(res.category);
+        const { data } = (await instance.get(`/user/lecturer/${detail}`));
+        const category = SetCategory(data.category);
         const newInput = {
-          ...res,
+          ...data,
           category: category,
         };
         setUserinfo(newInput);
-
-        const n = new Date();
-        const cal = (
-          await instance.get(
-            `/calendar/${kakaoUser.l_id}?month=${(
-              n.getMonth() + 1
-            ).toString()}&year=${n.getFullYear().toString()}`
-          )
-        ).data;
-        setCalendar(cal);
-
-        const { go_work, leave_work } = (
-          await instance.get(`/getwork/${kakaoUser.l_id}`)
-        ).data;
-        console.log(go_work.toLocaleString(), leave_work.toLocaleString());
       } catch (error) {
         console.log(error);
       }
@@ -131,32 +112,10 @@ export default function Detail() {
   };
 
   const goOrLeaveWork = (num) => {
-    const data = new FormData();
-    const now = getDate();
     const getNow = getNowTime();
 
-    if(num === 1) workTimeFunc(1, getNow);
+    if (num === 1) workTimeFunc(1, getNow);
     else workTimeFunc(num, getNow);
-
-    // console.log(now);
-    // if (num === 1) data.append("go_work", now.toString());
-    // else data.append("leave_work", now.toString());
-    // data.append("id", user.l_id);
-
-    // const url = num === 1 ? "/update/gowork" : "/update/leavework";
-
-    // instance
-    //   .put(url, data, {
-    //     headers: {
-    //       "Content-Type": "multipart/form-data",
-    //     },
-    //   })
-    //   .then((res) => {
-    //     workTimeFunc(num, getNow);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
   };
 
   return (
@@ -165,13 +124,14 @@ export default function Detail() {
         isOpen={modal}
         onRequestClose={() => setModal(false)}
         style={customStyle}
+        ariaHideApp={false}
       >
         <DetailModal />
       </Modal>
       <Header />
       <div className={styles.blue}>
         <div className={styles.center}>
-          <span className={classNames(styles.img)}>
+          <span className={styles.img}>
             <Image
               src={userinfo.k_img_url}
               alt=""
@@ -181,7 +141,7 @@ export default function Detail() {
               layout={"fixed"}
             />
           </span>
-          {userinfo.kakaoid === kakaoid && (
+          {userinfo.kakaoid === user.kakaoid && (
             <div className={styles.flex}>
               <Work active={active.attendance} onClick={() => goOrLeaveWork(1)}>
                 <Text active={active.attendance}>출근</Text>
@@ -194,31 +154,15 @@ export default function Detail() {
             </div>
           )}
         </div>
-        {/* {modify ? (
-          <div className={styles.info}>
-            <input type="search" value={userinfo.name} name="name" />
-            <input type="search" value={userinfo.category} name="category" />
-            <ModifyDiv>
-              <button onClick={() => setModify(false)}>수정완료</button>
-            </ModifyDiv>
-          </div>
-        ) : (
-          
-        )} */}
         <div className={styles.info}>
           <p className={styles.bold}>{userinfo.name}</p>
           <p>{userinfo.category} 분야</p>
-          {/* {userinfo.kakaoid === user.kakaoid && (
-              <ModifyDiv>
-                <button onClick={() => setModify(true)}>정보수정</button>
-              </ModifyDiv>
-            )} */}
         </div>
         <CalendarContainer>
           <Calendar
             onChange={(value) => {
               setValue(value);
-              if (userinfo.kakaoid === kakaoid) {
+              if (userinfo.kakaoid === user.kakaoid) {
                 setModal(true);
               }
             }}

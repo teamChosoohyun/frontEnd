@@ -1,11 +1,10 @@
 import styles from "../../styles/contents/software.module.css";
 import Image from "next/image";
-import Fade from "react-reveal/Fade";
-import maker from "./img/maker.png";
+import maker from "../../public/images/maker.png";
+
 export default function Others() {
   return (
     <div>
-      <Fade bottom>
         <div className={styles.title}>
           <p>메이커 교육</p>
         </div>
@@ -25,7 +24,6 @@ export default function Others() {
             발현시켜 줄 것 입니다.
           </p>
         </div>
-      </Fade>
     </div>
   );
 }

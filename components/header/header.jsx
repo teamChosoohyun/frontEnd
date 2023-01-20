@@ -4,9 +4,10 @@ import classNames from "classnames";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useRecoilValue } from "recoil";
-import { kakaoUserInfo } from "../../util/user";
+import { kakaoUserInfo } from "../../store/user";
 import { useEffect, useState } from "react";
 import { Init } from "../../util/init";
+import { updateUser } from "../../util/updateUser";
 
 export default function Header() {
   const router = useRouter();
@@ -16,6 +17,8 @@ export default function Header() {
   useEffect(() => {
     setUserinfo(user);
   }, []);
+
+  updateUser();
 
   return (
     <div className={styles.header}>
