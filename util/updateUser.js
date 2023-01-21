@@ -3,6 +3,7 @@ import { instance } from "./axiosSetting";
 import { kakaoUserInfo } from "../store/user";
 import { useRecoilState } from "recoil";
 import React from "react";
+import { Init } from "./init";
 
 
 export const updateUser = () => {
@@ -18,12 +19,7 @@ export const updateUser = () => {
         }));
       } catch (error) {
         console.log(error);
-        if (error instanceof AxiosError && error.response?.status === 401 || error instanceof AxiosError && error.response?.status === 403) {
-          setUser(({
-            ...user,
-            isLogin: false,
-          }));
-        }
+        setUser(Init);
       }
     })();
   }, [])

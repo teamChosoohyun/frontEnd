@@ -18,7 +18,7 @@ import { SetCategory } from "../../util/category";
 export default function Detail() {
   const router = useRouter();
   const { detail } = router.query;
-  const [value, setValue] = useState(new Date());
+  const [value, setValue] = useState();
   const [active, setActive] = useState({
     attendance: false,
     leaveWork: false,
@@ -26,26 +26,29 @@ export default function Detail() {
     leaTime: "",
   });
   const [modal, setModal] = useState(false);
-  const [userinfo, setUserinfo] = useState(Init); // 강사 정보
+  const [lecturerInfo, setLecturerInfo] = useState(Init); // 강사 정보
   const [user, setUser] = useState(Init); // 내 정보
   const kakaoUser = useRecoilValue(kakaoUserInfo);
+  const [mount, setMount] = useState(false);
 
   useEffect(() => {
     setUser(kakaoUser);
+    setValue(new Date());
     (async () => {
       try {
-        const { data } = (await instance.get(`/user/lecturer/${detail}`));
+        const { data } = await instance.get(`/user/lecturer/${detail}`);
         const category = SetCategory(data.category);
         const newInput = {
           ...data,
           category: category,
         };
-        setUserinfo(newInput);
+        setLecturerInfo(newInput);
       } catch (error) {
         console.log(error);
       }
     })();
-  }, []);
+    setMount(true);
+  }, [detail]);
 
   const getNowTime = () => {
     let now =
@@ -61,138 +64,105 @@ export default function Detail() {
     return now;
   };
 
-  const getDate = () => {
-    const now = new Date();
-
-    const newDate = now.toLocaleString().replaceAll(" ", "");
-    const day = newDate.substring(0, 10).replaceAll(".", "-");
-    const hour =
-      now.getHours().toString().padStart(2, "0") +
-      ":" +
-      now.getMinutes().toString().padStart(2, "0") +
-      ":" +
-      now.getSeconds().toString().padStart(2, "0");
-
-    const re = day + " " + hour;
-    return re;
-  };
-
   const workTimeFunc = (num, date) => {
     let newDate;
     if (num === 1) {
-      if (active.attendance) {
-        newDate = {
-          ...active,
-          attendance: false,
-          attTime: "",
-        };
-      } else {
+      const lecture = prompt("어떤 유형의 강의인지 간단히 입력 해주세요.");
+      const result = confirm("출근 하시겠습니까?");
+      if(result) {
         newDate = {
           ...active,
           attendance: true,
           attTime: date,
         };
+        setActive(newDate);
       }
     } else if (num === 2) {
-      if (active.leaveWork) {
-        newDate = {
-          ...active,
-          leaveWork: false,
-          leaTime: "",
-        };
-      } else {
+      const result = confirm("퇴근 하시겠습니까?");
+      if(result) {
         newDate = {
           ...active,
           leaveWork: true,
           leaTime: date,
         };
+        setActive(newDate);
       }
     }
-    setActive(newDate);
   };
 
   const goOrLeaveWork = (num) => {
     const getNow = getNowTime();
-
-    if (num === 1) workTimeFunc(1, getNow);
-    else workTimeFunc(num, getNow);
+    workTimeFunc(num, getNow);
   };
 
   return (
-    <div className={styles.detail}>
-      <Modal
-        isOpen={modal}
-        onRequestClose={() => setModal(false)}
-        style={customStyle}
-        ariaHideApp={false}
-      >
-        <DetailModal />
-      </Modal>
-      <Header />
-      <div className={styles.blue}>
-        <div className={styles.center}>
-          <span className={styles.img}>
-            <Image
-              src={userinfo.k_img_url}
-              alt=""
-              width={700}
-              height={500}
-              className={styles.img}
-              layout={"fixed"}
-            />
-          </span>
-          {userinfo.kakaoid === user.kakaoid && (
-            <div className={styles.flex}>
-              <Work active={active.attendance} onClick={() => goOrLeaveWork(1)}>
-                <Text active={active.attendance}>출근</Text>
-                <Text2>{active.attTime}</Text2>
-              </Work>
-              <Work active={active.leaveWork} onClick={() => goOrLeaveWork(2)}>
-                <Text active={active.leaveWork}>퇴근</Text>
-                <Text2>{active.leaTime}</Text2>
-              </Work>
+    <>
+      {mount && (
+        <div className={styles.detail}>
+          <Modal
+            isOpen={modal}
+            onRequestClose={() => setModal(false)}
+            style={customStyle}
+            ariaHideApp={false}
+          >
+            <DetailModal />
+          </Modal>
+          <Header />
+          <div className={styles.blue}>
+            <div className={styles.center}>
+              <span className={styles.img}>
+                <Image
+                  src={lecturerInfo.k_img_url}
+                  alt=""
+                  width={700}
+                  height={500}
+                  className={styles.img}
+                  layout={"fixed"}
+                />
+              </span>
+              {lecturerInfo.kakaoid === user.kakaoid && (
+                <div className={styles.flex}>
+                  <Work
+                    active={active.attendance}
+                    onClick={() => goOrLeaveWork(1)}
+                    disabled={active.attendance}
+                  >
+                    <Text active={active.attendance}>출근</Text>
+                    <Text2>{active.attTime}</Text2>
+                  </Work>
+                  <Work
+                    active={active.leaveWork}
+                    onClick={() => goOrLeaveWork(2)}
+                    disabled={!active.attendance}
+                  >
+                    <Text active={active.leaveWork}>퇴근</Text>
+                    <Text2>{active.leaTime}</Text2>
+                  </Work>
+                </div>
+              )}
             </div>
-          )}
+            <div className={styles.info}>
+              <p className={styles.bold}>{lecturerInfo.name}</p>
+              <p>{lecturerInfo.category} 분야</p>
+            </div>
+            <CalendarContainer>
+              <Calendar
+                onChange={(value) => {
+                  setValue(value);
+                  if (lecturerInfo.kakaoid === user.kakaoid) {
+                    setModal(true);
+                  }
+                }}
+                value={value}
+              ></Calendar>
+            </CalendarContainer>
+            <Footer />
+          </div>
         </div>
-        <div className={styles.info}>
-          <p className={styles.bold}>{userinfo.name}</p>
-          <p>{userinfo.category} 분야</p>
-        </div>
-        <CalendarContainer>
-          <Calendar
-            onChange={(value) => {
-              setValue(value);
-              if (userinfo.kakaoid === user.kakaoid) {
-                setModal(true);
-              }
-            }}
-            value={value}
-          ></Calendar>
-        </CalendarContainer>
-        <Footer />
-      </div>
-    </div>
+      )}
+    </>
   );
 }
-
-const ModifyDiv = styled.div`
-  p,
-  input {
-    font-size: 20px;
-  }
-  input {
-    width: 300px;
-    height: 40px;
-    margin-top: 5px;
-    padding: 5px;
-  }
-  display: flex;
-  position: relative;
-  button {
-    position: absolute;
-    right: 0;
-  }
-`;
 
 const CalendarContainer = styled.div`
   display: flex;
@@ -261,7 +231,8 @@ const CalendarContainer = styled.div`
     border-radius: 50%;
   }
 `;
-const Work = styled.div`
+
+const Work = styled.button`
   width: 340px;
   height: 60px;
   display: flex;
@@ -269,6 +240,8 @@ const Work = styled.div`
   background-color: ${({ active }) => (active ? "#FFA41D" : "#C8C8C8")};
   border-radius: 15px;
   margin: 20px 50px 0 50px;
+  border: none;
+  cursor: pointer;
 `;
 
 const Text = styled.span`
@@ -290,6 +263,7 @@ const Text2 = styled.span`
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  color: black;
 `;
 
 const customStyle = {
